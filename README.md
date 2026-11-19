@@ -51,6 +51,9 @@ python run_demo.py
 
 ## Results (CWRU subset)
 
+Held-out evaluation after training Isolation Forest on normal windows only
+(`n_train_normal=140`, `n_test=237`).
+
 | Metric | Value |
 |--------|-------|
 | Accuracy | 0.987 |
@@ -66,12 +69,22 @@ Confusion matrix (rows = true label, columns = predicted; order: normal, anomaly
  [ 0, 177]]
 ```
 
-Figures:
+### Anomaly score distribution
 
-- `results/anomaly_score_hist.png` — anomaly score distributions
-- `results/rms_vs_kurtosis.png` — RMS vs kurtosis feature space
-- `results/metrics.json` — full numeric summary
-- `results/classification_report.txt` — sklearn classification report
+Normal and fault windows form clearly separated score distributions.
+Higher scores indicate more anomalous behaviour.
+
+![Anomaly score histogram](results/anomaly_score_hist.png)
+
+### Feature space (RMS vs Kurtosis)
+
+Fault windows tend toward higher RMS and kurtosis relative to normal operation,
+which supports the unsupervised separation learned by the model.
+
+![RMS vs Kurtosis scatter](results/rms_vs_kurtosis.png)
+
+Numeric outputs are also saved in `results/metrics.json` and
+`results/classification_report.txt`.
 
 ## Repository layout
 
