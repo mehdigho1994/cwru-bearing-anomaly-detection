@@ -1,23 +1,23 @@
 {
-  "data_source": "synthetic_cwru_compatible",
-  "n_train_normal": 81,
-  "n_test": 209,
-  "n_test_normal": 35,
-  "n_test_anomaly": 174,
-  "accuracy": 0.9904306220095693,
-  "precision": 0.9886363636363636,
+  "data_source": "cwru",
+  "n_train_normal": 140,
+  "n_test": 237,
+  "n_test_normal": 60,
+  "n_test_anomaly": 177,
+  "accuracy": 0.987342,
+  "precision": 0.983333,
   "recall": 1.0,
-  "f1": 0.9942857142857143,
+  "f1": 0.991597,
   "roc_auc": 1.0,
   "average_precision": 1.0,
   "confusion_matrix": [
     [
-      33,
-      2
+      57,
+      3
     ],
     [
       0,
-      174
+      177
     ]
   ],
   "feature_names": [

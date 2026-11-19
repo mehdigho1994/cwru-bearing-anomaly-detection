@@ -121,7 +121,10 @@ def _read_source() -> str | None:
     meta = RAW_DIR / "SOURCE.txt"
     if not meta.exists():
         return None
-    return meta.read_text(encoding="utf-8").strip().splitlines()[0]
+    text = meta.read_text(encoding="utf-8-sig").strip()
+    if not text:
+        return None
+    return text.splitlines()[0].strip()
 
 
 def _all_mats_present() -> bool:

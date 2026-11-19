@@ -1,1 +1,1 @@
-"""Bearing anomaly detection demo on CWRU-style vibration data."""
+"""Bearing anomaly detection on CWRU vibration data."""
